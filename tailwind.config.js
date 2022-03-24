@@ -51,5 +51,9 @@ module.exports = {
   variants:{
     width:["responsive", "hover", "focus"]
   },
-  plugins: [],
+  plugins: [
+    require('postcss-import'),
+    require('tailwindcss')('./tailwind.config.js'),
+    require('autoprefixer'),
+  ]
 };
